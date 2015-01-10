@@ -2,6 +2,5 @@ file<-read.table("household_power_consumption.txt",head=T,sep=";", na.strings="?
 head(file)
 file1<-subset(file,Date=="1/2/2007"|Date=="2/2/2007")
 png(filename="plot1.png")
-plot1_GAP<-file1$Global_acitive_power[file1$Global_active_power<=6]
-hist(as.numeric(file1$Global_active_power),main="Global Active Power",xlab="Global Active Power (kilowatts)",col="red")
+hist(file1$Global_active_power,main="Global Active Power",xlab="Global Active Power (kilowatts)",col="red")
 dev.off()
